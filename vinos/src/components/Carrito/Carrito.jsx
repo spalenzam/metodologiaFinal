@@ -43,3 +43,16 @@ const Carrito = ({ cart, handleModificarCantidad, handleEliminarItems, handleVac
             </div>
         </>    
     );
+
+    if(!cart.line_items) return'Cargando';
+
+    return (
+        <Container>
+            <div className={classes.barra} />
+            <Typography className={classes.titulo} variant="h3" gutterBottom>Tu compra</Typography>
+            { !cart.line_items.length ? <CarritoVacio/> : <CarritoLleno/> }
+        </Container>
+    )
+}
+
+export default Carrito
