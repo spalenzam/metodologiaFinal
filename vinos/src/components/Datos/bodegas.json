@@ -1,17 +1,50 @@
 [
     {
-        "id": "1",
-        "nombre":"Bodega 1",
-        "telefono":"1111111"
+        "id":"BodegaA16",
+        "nombre": "Bodega A16",
+        "slogan":"Amor por el vino",
+        "logo":"logoa16.png",
+        "telefono": "(+54) 9 261 6538963",
+        "ubicacion": "Ruta 7 y Calle Cobos 5890 Perdriel, Luján de Cuyo, Mendoza - Argentina",
+        "email": "turismo@a16sa.com.ar",
+        "fotos": [
+            "a166.jpg",
+            "a161.jpg",
+            "a162.jpg",
+            "a163.jpg",
+            "a164.jpg",
+            "a165.jpg"
+        ]
     },
     {
-        "id": "2",
-        "nombre":"Bodega 2",
-        "telefono":"2222222"
+        "id":"AchavalFerrer",
+        "nombre": "Achaval Ferrer",
+        "slogan":"Guardianes de un legado",
+        "logo":"logoachaval.jpg",
+        "telefono": "(+54) 9 261 3388699",
+        "ubicacion":"Ruta 7, kilometro 1056, Luján de Cuyo, Mendoza, Argentina",
+        "fotos": [
+            "acha1.jpg",
+            "acha2.jpg",
+            "acha3.jpg",
+            "acha4.jpg",
+            "acha5.jpg",
+            "acha6.jpg"
+        ] 
     },
     {
-        "id": "3",
-        "nombre":"Bodega 3",
-        "telefono":"3333333"
+        "id":"CarinaE",
+        "nombre": "CarinaE",
+        "logo":"logocarinae.png",
+        "telefono": "(+54) 261 5545422",
+        "ubicacion":"Videla Aranda 2899, Cruz de Piedra, Maipú, Mendoza, Argentina",
+        "fotos": [
+            "car.jpg",
+            "car4.jpg",
+            "car6.jpg",
+            "car1.jpg",
+            "car5.jpg",
+            "car2.jpg"
+        ]  
     }
 ]
