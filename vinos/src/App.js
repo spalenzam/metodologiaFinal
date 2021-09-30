@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { commerce } from './lib/commerce';
-import { Productos, Navbar, Carrito, Finalizar, Vinoteca, Bodega } from './components';
+import { Productos, NavBar, Carrito, Finalizar, Vinoteca, Bodega } from './components';
 
 
 const App = () => {
@@ -74,7 +74,7 @@ const App = () => {
     return (
         <Router>
             <div>
-                <Navbar totalItems={cart.total_items} />
+                <NavBar totalItems={cart.total_items} />
                 <Switch>
                     <Route  exact path="/">
                         <Productos productos = {productos} agregarACarrito={handleAgregarACarrito}/>
