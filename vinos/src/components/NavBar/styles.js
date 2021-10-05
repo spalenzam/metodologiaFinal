@@ -3,19 +3,28 @@ import { makeStyles, fade } from '@material-ui/core/styles';
 const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
+  logoHeader: {
+    width: '100px',
+  },
+  imgLogo: {
+    width: '70%',
+    height: 'auto',
+    margin: '0px auto',
+    display: 'block',
+  },
   appBar: {
-    boxShadow: 'none',
+    boxShadow: '0px 5px 5px 0px rgb(0 0 0 / 16%) !important',
+    background: '#F8F6E9',
     borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+    padding: '10px 0',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
   },
   titulo: {
-    flexGrow: 2,
-    alignItems: 'center',
-    display: 'flex',
     textDecoration: 'none',
+    paddingLeft: '20px',
   },
   imagen: {
     marginRight: '10px',
@@ -26,7 +35,13 @@ export default makeStyles((theme) => ({
       display: 'none',
     },
   },
+  menu: {
+    width: 'calc(100% - 150px)',
+    display: 'flex',
+    justifyContent: 'flex-end',
+  },
   grow: {
+    width: '50px',
     flexGrow: 1,
   },
   buscar: {

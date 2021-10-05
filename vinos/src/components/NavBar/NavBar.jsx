@@ -15,20 +15,23 @@ const Navbar = ({ totalItems }) => {
         <>
             <AppBar position="fixed" className={classes.appBar} color="inherit">
                 <Toolbar>
-                    <Typography component={Link} to="/vinoteca" variant="h6" className={classes.titulo} color="inherit">
-                        <img src={logo} alt="Commerce.js" height="25px" className={classes.imagen} />
-                        VINOTECA
-                    </Typography>
-                    <Typography component={Link} to="/bodega" variant="h6" className={classes.titulo} color="inherit">
-                        {/* <img src={logo} alt="Commerce.js" height="25px" className={classes.imagen} /> */}
-                        BODEGAS
-                    </Typography>
-                    <Typography component={Link} to="/" variant="h6" className={classes.titulo} color="inherit">
-                        {/* <img src={logo} alt="Commerce.js" height="25px" className={classes.imagen} /> */}
-                        TIENDA
-                    </Typography>
-                    <div className={classes.grow} />
-                    {ubicacion.pathname === '/' ? (
+                    <div className={classes.logoHeader}>
+                        <img src={logo} alt="Commerce.js" height="25px" className={classes.imgLogo} />
+                    </div>
+                    <div className={classes.menu}>
+                        <Typography component={Link} to="/vinoteca" variant="h6" className={classes.titulo} color="inherit">
+                            VINOTECA
+                        </Typography>
+                        <Typography component={Link} to="/bodega" variant="h6" className={classes.titulo} color="inherit">
+                            BODEGAS
+                        </Typography>
+                        <Typography component={Link} to="/" variant="h6" className={classes.titulo} color="inherit">
+                            TIENDA
+                        </Typography>
+                    </div>
+                    
+                    <div className={classes.grow}>
+                        {ubicacion.pathname === '/' ? (
                         <div className={classes.boton}>
                             <IconButton component={Link} to="/carrito" aria-label="Show cart items" color="inherit">
                                 <Badge badgeContent={totalItems} color="secondary">
@@ -36,6 +39,7 @@ const Navbar = ({ totalItems }) => {
                                 </Badge>
                             </IconButton>
                         </div>) : null}
+                    </div>
                 </Toolbar>
             </AppBar>
 
