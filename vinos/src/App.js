@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { commerce } from './lib/commerce';
 import { Productos, NavBar, Carrito, Finalizar, Vinoteca, Bodega } from './components';
+import DetalleBodega from './components/Bodega/DetalleBodega';
 
 
 const App = () => {
@@ -100,6 +101,9 @@ const App = () => {
                     </Route>
                     <Route  exact path="/bodega">
                         <Bodega />
+                    </Route>
+                    <Route exact path="/bodega/:id">
+                        <DetalleBodega />
                     </Route>
                 </Switch>        
                
