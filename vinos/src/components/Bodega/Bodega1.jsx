@@ -1,32 +1,65 @@
 import React from 'react';
 import useStyles from './styles';
-import { Typography } from '@material-ui/core';
 import { ImageList, ImageListItem } from '@mui/material';
 import { Link } from 'react-router-dom';
+import './style-bodega.css';
 
 const BodegaDato = ({ id,nombre, slogan, logo, fotos }) => {
     const classes = useStyles();    
 
     return (
         <>
-            <Typography className={classes.subtitulo2} align="center" variant="h4" color="inherit">
-                <img src={require(`../img/${logo}`).default} height="50px" />   
-                <Link className={classes.subtitulo} to={`/bodega/${id}`} underline="none"> {nombre} </Link>
-            </Typography>
-            <Typography className={classes.subtitulo3} align="center" variant="h6" color="inherit">{slogan}</Typography>
+            <Link className="link-bodega" to={`/bodega/${id}`}>
+                <img src={`images/${logo}`} /> 
+                <h4 className="nameBodega" align="center">
+                    {nombre} 
+                </h4>
+            </Link>
+            <h6 className="sloganBodega" align="center">{slogan}</h6>
 
-            <ImageList cols={3} >
+            <ImageList cols={3} className="gridBodega">
                 {fotos.map((item) => (
                     <ImageListItem key={item}>
-                        <img src={require(`../img/${item}`).default} />
+                        <img  className="grillaFoto" src={`images/${item}`} />
                     </ImageListItem>
                 ))}
             </ImageList>
 
-            <Link to={`/bodega/${id}`}> Ver detalles</Link>
+            <Link to={`/bodega/${id}`} className="detalleBodega"> Ver detalles</Link>
 
         </>
     )
 }
+
+const itemData = [
+    {
+        img: 'images/a16.jpg',
+        title: 'Bodega A16',
+    },
+    {
+        img: 'images/a161.jpg',
+        title: 'Bodega A16',
+    },
+    {
+        img: 'images/a162.jpg',
+        title: 'Bodega A16',
+    },
+    {
+        img: 'images/a163.jpg',
+        title: 'Bodega A16',
+    },
+    {
+        img: 'images/a164.jpg',
+        title: 'Bodega A16',
+    },
+    {
+        img: 'images/a165.jpg',
+        title: 'Bodega A16',
+    },
+    {
+        img: 'images/a166.jpg',
+        title: 'Bodega A16',
+    },
+];
 
 export default BodegaDato
