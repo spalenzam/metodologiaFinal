@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { commerce } from './lib/commerce';
-import { Productos, NavBar, Carrito, Finalizar, Vinoteca, Bodega, Footer } from './components';
+import { Productos, NavBar, Carrito, Finalizar, Vinoteca, Bodega} from './components';
 import DetalleBodega from './components/Bodega/DetalleBodega';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
     //Estado donde guardamos los productos
