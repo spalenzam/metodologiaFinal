@@ -4,7 +4,7 @@ import { ImageList, ImageListItem } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './style-bodega.css';
 
-const BodegaDato = ({ id,nombre, slogan, logo, fotos }) => {
+const BodegaDato = ({ id, nombre, slogan, logo, fotos }) => {
     const classes = useStyles();    
 
     return (
